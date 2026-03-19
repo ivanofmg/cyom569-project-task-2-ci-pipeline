@@ -4,6 +4,45 @@
 
 [![CI Pipeline](https://github.com/ivanofmg/cyom569-project-task-2-ci-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/ivanofmg/cyom569-project-task-2-ci-pipeline/actions/workflows/ci.yml)
 
+## Tech stack
+
+Inspired by portfolio-style READMEs: **[Shields.io](https://shields.io/)** badges with **`style=for-the-badge`** (bold, high-contrast blocks), **ALL CAPS** labels, and [Simple Icons](https://simpleicons.org/) where the logo is stable.
+
+### 🔄 CI/CD & version control
+
+[![GitHub Actions](https://img.shields.io/badge/GITHUB%20ACTIONS-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/features/actions)
+[![Git](https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![GitHub](https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+
+### 🐍 Runtime & application
+
+[![Python](https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/FLASK-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Markdown](https://img.shields.io/badge/MARKDOWN-000000?style=for-the-badge&logo=markdown&logoColor=white)](https://daringfireball.net/projects/markdown/)
+
+### 🐳 Containerization
+
+[![Docker](https://img.shields.io/badge/DOCKER-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+
+### 🛡️ Quality & security (DevSecOps)
+
+[![flake8](https://img.shields.io/badge/FLAKE8-00979D?style=for-the-badge)](https://flake8.pycqa.org/)
+[![Bandit](https://img.shields.io/badge/BANDIT-EAB403?style=for-the-badge&logo=python&logoColor=black)](https://bandit.readthedocs.io/)
+
+> **How to customize:** edit label text or hex colors in the badge URL (`MESSAGE-COLOR` segment), or browse presets at [shields.io/badges](https://shields.io/badges). Add tools by duplicating a badge row and picking `logo=` from Simple Icons slugs.
+
+### Quick reference (versions)
+
+| Area | Choice |
+|------|--------|
+| Runtime | Python **3.11**, **Flask** 3.x |
+| Container | **Docker** (`python:3.11-slim`) |
+| CI/CD | **GitHub Actions** |
+| Linting | **flake8** |
+| Security (SAST) | **Bandit** |
+
+---
+
 ## Summary
 
 This repository implements a **GitHub Actions CI pipeline** that validates Python code, enforces style with **flake8**, runs **SAST** with **Bandit**, and verifies a **Docker** image build on every change to `main`. The design follows **shift-left** and **DevSecOps** practices described in resources such as *Hands-On Security in DevOps*.
@@ -30,18 +69,6 @@ Developer
             5. SAST: bandit
             6. Build: docker build
 ```
-
----
-
-## Stack
-
-| Area | Choice |
-|------|--------|
-| Runtime | Python **3.11**, **Flask** 3.x |
-| Container | **Docker** (`python:3.11-slim`) |
-| CI/CD | **GitHub Actions** |
-| Linting | **flake8** |
-| Security (SAST) | **Bandit** |
 
 ---
 
