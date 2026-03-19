@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 
 
@@ -15,4 +16,7 @@ def health():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    # Bind address/port configurable for CI security checks and container runtime.
+    host = os.getenv("HOST", "127.0.0.1")
+    port = int(os.getenv("PORT", "5000"))
+    app.run(host=host, port=port)
