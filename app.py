@@ -16,7 +16,7 @@ def health():
 
 
 if __name__ == "__main__":
-    # Bind address/port configurable for CI security checks and container runtime.
+    # Host/port from env (default localhost; Docker sets HOST=0.0.0.0).
     host = os.getenv("HOST", "127.0.0.1")
     port = int(os.getenv("PORT", "5000"))
     app.run(host=host, port=port)

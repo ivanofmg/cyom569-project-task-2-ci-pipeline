@@ -35,7 +35,7 @@ jobs:
         run: flake8 . --count --statistics
 
       - name: Run security scan with Bandit
-        run: bandit -r . -ll
+        run: bandit -r . -ll -x .venv -x venv
 
       - name: Build Docker image
         run: docker build -t cyom569-ci-pipeline .
