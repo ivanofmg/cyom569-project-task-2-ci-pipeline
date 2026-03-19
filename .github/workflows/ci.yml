@@ -19,15 +19,23 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install application dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install quality and security tools
+        run: pip install flake8 bandit
 
       - name: Validate Python syntax
-        run: |
-          python -m py_compile app.py
+        run: python -m py_compile app.py
+
+      - name: Run linting
+        run: flake8 . --count --statistics
+
+      - name: Run security scan with Bandit
+        run: bandit -r . -ll
 
       - name: Build Docker image
-        run: |
-          docker build -t cyom569-ci-pipeline .
+        run: docker build -t cyom569-ci-pipeline .
