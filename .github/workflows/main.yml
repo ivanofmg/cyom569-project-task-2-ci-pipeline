@@ -1,0 +1,19 @@
+name: Hello World Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  System_Info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello, world!"
+
+      - name: Show OS Release
+        run: cat /etc/os-release
+
+      - name: Show Date and Time
+        run: date
